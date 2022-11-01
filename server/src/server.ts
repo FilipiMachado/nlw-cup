@@ -5,8 +5,6 @@ const prisma = new PrismaClient({
   log: ["query"],
 });
 
-console.log(prisma);
-
 async function bootstrap() {
   const fastify = Fastify({
     logger: true,
