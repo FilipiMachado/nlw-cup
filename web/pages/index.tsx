@@ -1,7 +1,11 @@
-export default function Home() {
+interface HomeProps {
+  count: number;
+}
+
+export default function Home(props: HomeProps) {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <h1>Count: {props.count}</h1>
     </div>
   );
 }
@@ -10,9 +14,9 @@ export const getServerSideProps = async () => {
   const response = await fetch("http://localhost:3333/pools/count");
   const data = await response.json();
 
-  console.log(data);
-
   return {
-    props: {},
+    props: {
+      count: data.count,
+    },
   };
 };
