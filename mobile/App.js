@@ -7,6 +7,8 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 
+import { Loading } from "./src/components/Loading";
+
 import { THEME } from "./src/styles/theme";
 
 export default function App() {
@@ -15,14 +17,14 @@ export default function App() {
     Roboto_500Medium,
     Roboto_700Bold,
   });
-
   return (
     <NativeBaseProvider theme={THEME}>
       <Center flex={1} bgColor="gray.900">
-        <Text color="white" fontSize={24}>
+        <Loading />
+        {/* <Text color="white" fontSize={24}>
           Hello World!
         </Text>
-        <StatusBar style="auto" />
+        <StatusBar style="auto" /> */}
       </Center>
     </NativeBaseProvider>
   );
