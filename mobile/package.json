@@ -11,11 +11,17 @@
   "dependencies": {
     "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
+    "native-base": "^3.4.21",
     "react": "18.0.0",
-    "react-native": "0.69.6"
+    "react-native": "0.69.6",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-svg": "^12.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
+  },
+  "overrides": {
+    "react": "18.0.0"
   },
   "private": true
 }
