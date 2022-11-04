@@ -16,14 +16,53 @@ async function main() {
       title: "Example Pool",
       code: "BOL321",
       ownerId: user.id,
+
+      participants: {
+        create: {
+          userId: user.id,
+        },
+      },
     },
   });
 
-  const participant = await prisma.participant.create({
+  await prisma.game.create({
     data: {
-      
+      date: "2022-11-08T12:00:00.315Z",
+      firstTeamCountryCode: "DE",
+      secondTeamCountryCode: "BR",
+    },
+  });
+
+  await prisma.game.create({
+    data: {
+      date: "2022-11-06T14:00:00.315Z",
+      firstTeamCountryCode: "US",
+      secondTeamCountryCode: "DE",
+
+      guesses: {
+        create: {
+          firstTeamPoints: 2,
+          secondTeamPoints: 4,
+
+          participant: {
+            connect: {
+              userId_poolId: {
+                userId: user.id,
+                poolId: pool.id,
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  /* const participant = await prisma.participant.create({
+    data: {
+      poolId: pool.id,
+      userId: user.id
     }
-  })
+  }) */
 }
 
 main();
