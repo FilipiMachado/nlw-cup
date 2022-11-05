@@ -8,7 +8,12 @@ module.exports = {
       },
 
       colors: {
+        ignite: {
+          500: "#129e57",
+        },
+
         gray: {
+          100: "#e1e1e6",
           900: "#121214",
         },
       },

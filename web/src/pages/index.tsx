@@ -18,10 +18,11 @@ export default function Home() {
           Crie seu próprio bolão da copa e compartilhe entre amigos!
         </h1>
 
-        <div>
+        <div className="mt-10 flex items-center gap-2">
           <Image src={usersAvatarExample} alt="logo image" />
-          <strong>
-            <span>+12.592</span> pessoas já estão usando
+          <strong className="text-gray-100 text-xl">
+            <span className="text-ignite-500">+12.592</span> pessoas já estão
+            usando
           </strong>
         </div>
 
