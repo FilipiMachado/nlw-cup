@@ -10,11 +10,13 @@ import iconCheckImg from "../assets/check-icon.svg";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center">
       <main>
         <Image src={logoImg} alt="logo image" />
 
-        <h1>Crie seu próprio bolão da copa e compartilhe entre amigos!</h1>
+        <h1 className="mt-14 text-white text-5xl font-bold leading-tight">
+          Crie seu próprio bolão da copa e compartilhe entre amigos!
+        </h1>
 
         <div>
           <Image src={usersAvatarExample} alt="logo image" />
