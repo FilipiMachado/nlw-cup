@@ -26,13 +26,16 @@ export default function Home() {
           </strong>
         </div>
 
-        <form>
+        <form className="mt-10 flex">
           <input
+            className="flex-1 px-6 py-4 rounded"
             type="text"
             required
             placeholder="Qual é o nome do seu bolão?"
           />
-          <button type="submit">Criar meu bolão</button>
+          <button className="bg-yellow-500" type="submit">
+            Criar meu bolão
+          </button>
         </form>
 
         <p>
