@@ -46,18 +46,21 @@ export default function Home() {
           para convidar outras pessoas 🚀
         </p>
 
-        <div className="mt-10 pt-10 border-t border-gray-600 divide-x flex justify-between">
-          <div>
+        <div className="mt-10 pt-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
+          <div className="flex items-center gap-6">
             <Image src={iconCheckImg} alt="" />
-            <div>
-              <span>+2034</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-2xl">+2034</span>
               <span>Bolões criados!</span>
             </div>
           </div>
-          <div>
+
+          <div className="w-px h-14 bg-gray-600 divide-x" />
+
+          <div className="flex items-center gap-6">
             <Image src={iconCheckImg} alt="" />
-            <div>
-              <span>+192.847</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-2xl">+192.847</span>
               <span>Palpites enviados!</span>
             </div>
           </div>
