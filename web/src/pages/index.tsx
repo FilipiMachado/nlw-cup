@@ -1,14 +1,15 @@
-/* interface HomeProps {
-  count: number;
-} */
-
 import Image from "next/image";
 import appPreviewImg from "../assets/web-preview.png";
 import logoImg from "../assets/logo.svg";
 import usersAvatarExample from "../assets/avatars-example.png";
 import iconCheckImg from "../assets/check-icon.svg";
+import { api } from "../lib/axios";
 
-export default function Home() {
+interface HomeProps {
+  poolCount: number;
+}
+
+export default function Home(props: HomeProps) {
   return (
     <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 gap-28 items-center">
       <main>
@@ -50,7 +51,7 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <Image src={iconCheckImg} alt="" />
             <div className="flex flex-col">
-              <span className="font-bold text-2xl">+2034</span>
+              <span className="font-bold text-2xl">+{props.poolCount}</span>
               <span>Bolões criados!</span>
             </div>
           </div>
@@ -72,13 +73,15 @@ export default function Home() {
   );
 }
 
-/* export const getServerSideProps = async () => {
-  const response = await fetch("http://localhost:3333/pools/count");
-  const data = await response.json();
+export const getServerSideProps = async () => {
+  const poolCountRes = await api.get("pools/count");
+
+  const guessCountRes = await api.get("guesses/count");
 
   return {
     props: {
-      count: data.count,
+      poolCount: poolCountRes.data.count,
+      guessCountRes: guessCountRes.data.count,
     },
   };
-}; */
+};
