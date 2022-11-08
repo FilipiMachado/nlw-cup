@@ -26,7 +26,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
       value={{
         signIn,
         user: {
-          name: "Fil",
+          name: "FilBr",
           avatarUrl: "https://github.com/FilipiMachado.png",
         },
       }}
