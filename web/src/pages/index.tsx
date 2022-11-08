@@ -27,8 +27,12 @@ export default function Home(props: HomeProps) {
 
       await navigator.clipboard.writeText(code);
 
+      setPoolTitle("");
+
       alert(
-        "Bolão criado com sucesso, o código foi copiado para a área de transferência!"
+        "Bolão criado com sucesso, o código " +
+          code +
+          " foi copiado para a área de transferência!"
       );
     } catch (err) {
       console.log(err);
@@ -60,6 +64,7 @@ export default function Home(props: HomeProps) {
             required
             placeholder="Qual é o nome do seu bolão?"
             onChange={(e) => setPoolTitle(e.target.value)}
+            value={poolTitle}
           />
           <button
             className="bg-yellow-500 px-6 py-4 rounded text-gray-900 font-bold text-sm uppercase hover:bg-yellow-700"
@@ -88,7 +93,7 @@ export default function Home(props: HomeProps) {
           <div className="flex items-center gap-6">
             <Image src={iconCheckImg} alt="" />
             <div className="flex flex-col">
-              <span className="font-bold text-2xl">+{props.poolCount}</span>
+              <span className="font-bold text-2xl">+{props.guessCount}</span>
               <span>Palpites enviados!</span>
             </div>
           </div>
