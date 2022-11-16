@@ -6,7 +6,7 @@ import { Header } from "../components/Header";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 
-export function New() {
+export function Find() {
   return (
     <VStack flex={1} bgColor="gray.900">
       <Header title="Criar novo bolão" />
