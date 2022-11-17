@@ -8,7 +8,7 @@ import {
 
 import { AuthContextProvider } from "./src/contexts/AuthContext";
 
-import { Pools } from "./src/screens/Pools";
+import { Polls } from "./src/screens/Polls";
 import { Loading } from "./src/components/Loading";
 
 import { THEME } from "./src/styles/theme";
@@ -28,7 +28,7 @@ export default function App() {
           translucent
         />
 
-        {fontsLoaded ? <Pools /> : <Loading />}
+        {fontsLoaded ? <Polls /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
