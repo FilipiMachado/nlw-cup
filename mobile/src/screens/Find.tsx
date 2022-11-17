@@ -1,6 +1,4 @@
-import { VStack, Heading, Text } from "native-base";
-
-import Logo from "../assets/logo.svg";
+import { VStack, Heading } from "native-base";
 
 import { Header } from "../components/Header";
 import { Input } from "../components/Input";
@@ -9,29 +7,22 @@ import { Button } from "../components/Button";
 export function Find() {
   return (
     <VStack flex={1} bgColor="gray.900">
-      <Header title="Criar novo bolão" />
+      <Header title="Buscar por código" showBackButton />
 
       <VStack mt={8} mx={5} alignItems="center">
-        <Logo />
-
         <Heading
           fontFamily="heading"
           color="white"
           fontSize="xl"
-          my={8}
+          mb={8}
           textAlign="center"
         >
-          Crie seu próprio bolão da copa e compartilhe entre amigos!
+          Encontrar o bolão através de seu código único
         </Heading>
 
-        <Input mb={2} placeholder="Qual é o nome do seu bolão?"></Input>
+        <Input mb={2} placeholder="Qual é o código do seu bolão?"></Input>
 
-        <Button title="Criar meu bolão" />
-
-        <Text color="gray.200" fontSize="sm" textAlign="center" px={10} mt={4}>
-          Após criar seu bolão, você receberá um código único que poderá usar
-          para convidar outras pessoas.
-        </Text>
+        <Button title="BUSCAR BOLÃO" />
       </VStack>
     </VStack>
   );
