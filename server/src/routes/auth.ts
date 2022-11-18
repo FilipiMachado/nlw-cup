@@ -1,6 +1,6 @@
 import { prisma } from "../lib/prisma";
 import { FastifyInstance } from "fastify";
 
-export function authRoutes(fastify: FastifyInstance) {
+export async function authRoutes(fastify: FastifyInstance) {
   
 }

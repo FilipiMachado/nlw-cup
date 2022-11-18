@@ -3,7 +3,7 @@ import { FastifyInstance } from "fastify";
 import { z } from "zod";
 import ShortUniqueId from "short-unique-id";
 
-export function pollRoutes(fastify: FastifyInstance) {
+export async function pollRoutes(fastify: FastifyInstance) {
   fastify.get("/polls/count", async () => {
     const count = await prisma.poll.count();
 
